@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Resultados</h1>
+<div class="voltar"><a href="/">Voltar</a></div>
+<div class="cabecalho"></div>
+{% for message in get_flashed_messages() %}
+    <div class=flash>{{ message }}</div>
+{% endfor %}
+<div class="resultadoADM">
+    <span><b>ADM Pronação:</b></span>
+    <span>{{ '%0.1f'| format(admpronation|float) }}</span>
+</div>
+<div class="resultadoADM">
+    <span><b>ADM Supinação:</b></span>
+    <span>{{ '%0.1f'| format(admsupination|float) }}</span>
+</div>
+<div class="resultadoADM">
+    <span><b>ADM total:</b></span>
+    <span>{{ '%0.1f'| format(admtotal|float) }}</span>
+</div>
+<img src="{{ url_for('static', filename=image) }}" alt="Resultado da ADM">
+{% endblock %}

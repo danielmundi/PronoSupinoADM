@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1>Cálculo ADM</h1>
+<div class="cabecalho"></div>
+<p>Esse site foi criado para facilitar o cálculo da ADM de pronação e supinação do antebraço com base nos dados de um Sistema Óptico de Captura de Movimento. Ele é parte do Trabalho de Conclusão de Curso (TCC) do aluno Daniel S. F., do curso de Engenharia da Computação da USP. O código que realiza o cálcula da ADM, assim como a monografia do TCC, estão disponíveis em <a href="https://github.com/danielmundi/PronoSupinoADM">GitHub</a>.</p>
+<p>Para utilizar esse recurso, leia o TCC na íntegra para aprender como realizar as medições.</p>
+<p>Após isso, envie seu arquivo aqui para testar o código e gerar seu resultado.</p>
+<br>
+<form method="post" enctype="multipart/form-data" action="">
+    <input type="file" name="arquivotsv" id="arquivotsv" onchange="this.form.submit()" style="display: none;">
+    <label for="arquivotsv">
+        <span class="myButton" id="myButton" style="box-shadow: 0px 1px 0px 0px rgb(84, 163, 247) inset; background: rgb(0, 125, 193) linear-gradient(to bottom, rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) repeat scroll 0% 0%; border-radius: 8px; border: 1px solid rgb(18, 77, 119); display: inline-block; cursor: pointer; color: rgb(255, 255, 255); font-family: Arial; font-size: 14px; padding: 25px 30px; text-decoration: none; text-shadow: 0px 1px 0px rgb(21, 70, 130);">Envie seu arquivo aqui</span>
+    </label>
+    {% for message in get_flashed_messages() %}
+        <div class=flash>{{ message }}</div>
+{% endfor %}
+</form>
+{% endblock %}
