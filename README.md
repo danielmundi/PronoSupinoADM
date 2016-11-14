@@ -1,6 +1,4 @@
-# PronoSupinoADM
-
-## Abstract
+# Abstract
 
 FINIMUNDI, D. S. **Feasibility analysis of algorithm for 3D kinematic evaluation of elbow pronation and supination.** 2016. 72p. Trabalho de Conclusão de Curso - Escola de Engenharia de São Carlos, Universidade de São Paulo, São Carlos, 2016.
 
